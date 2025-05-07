@@ -17,7 +17,7 @@ Todos los componentes heredan de javax.swing.JComponent.
 
 #### Jerarquía de Java Swing:
 
-![Jerarquía de Java Swing.](/java/jerarquia_swing.png)
+![Jerarquía de Java Swing.](/java/img/jerarquia_swing.png)
 
 ### Cuadros de diálogo
 
@@ -37,25 +37,85 @@ Existen Diálogos preestablecidos, los cuales pueden tener distinta finalidad:
 
 A partir de aquí tenemos una serie de controles que podemos utilizar, a continuación exponemos los más comunes:
 
-#### JOptionPane
+### JOptionPane
 
 Para crear diálogos preestablecidos esta la clase JOptionPane. Esta clase implementa métodos (static) de la forma showXXDialog, donde XX va a variar de acuerdo según el tipo de dialogo que se necesite.
 
 * Todos los diálogos son modales.
 * Se puede configurar mediante parámetros: titulo, icono, mensajes, etc.
 
-__JOptionPane.showMessageDialog__
+#### JOptionPane.showMessageDialog
 
 Este método permite mostrar ventanas de diálogo que muestran un mensaje y contienen un botón de
 aceptación.
 
-__showMessageDialog(ventana, "Mensaje", “Titulo de ventana”, icono){};__
+##### showMessageDialog(ventana, "Mensaje", “Titulo de ventana”, icono);
 
 Ejemplos:
 
+🗨 Un cuadro de diálogo de contexto general.
+
 ```
-//Mensaje plano
+// Mensaje plano
 JOptionPane.showMessageDialog(null, "Mensaje plano", "Mensaje", JOptionPane.PLAIN_MESSAGE);
 ```
 
-![Ejemplo Mensaje plano.](/java/ejemplo_jpane_1.png)
+❌ Un cuadro de diálogo de error.
+
+```
+// Mensaje de error
+JOptionPane.showMessageDialog(null, "Mensaje de error", "Error", JOptionPane.EROR_MESSAGE);
+```
+
+💬 Un cuadro de texto informativo.
+
+```
+// Mensaje informativo
+JOptionPane.showMessageDialog(null, "Mensaje informativo", "Información", JOptionPane.INFORMATION_MESSAGE);
+```
+
+❗ Un cuadro de texto de aviso.
+
+```
+// Mensaje de aviso
+JOptionPane.showMessageDialog(null, "Mensaje de aviso", "Aviso", JOptionPane.WARNING_MESSAGE);
+```
+
+❔ Un cuadro de texto de pregunta.
+
+```
+// Mensaje de pregunta
+JOptionPane.showMessageDialog(null, "Mensaje de pregunta", "Pregunta", JOptionPane.QUESTION_MESSAGE);
+```
+
+#### JOptionPane.showConfirmDialog
+
+Este método permite mostrar diálogos donde se puede elegir entre varias opciones (aceptar, cancelar, si o no).
+
+##### showConfirmDialog(ventana, “Mensaje”, “Titulo de ventana”, tipo de opción, icono);
+
+Ejemplos:
+
+✔ Cuadro de confirmación por defecto.
+
+```
+// Mensaje de confirmación por defecto
+JOptionPane.showMessageDialog(null, "Aquí va el mensaje", "Ventana por defecto", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+```
+
+❔ Cuadro de confirmación Si/No.
+
+```
+// Mensaje confirmación si-no
+int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va el mensaje", "Ventana SI-NO", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+String mensaje = "";
+
+if(respuesta == 0) {
+    mensaje = "Ha contestado si.";
+} else {
+    mensaje = "Ha respondido no.";
+}
+
+JOptionPane.showMessageDialog(null, mensaje, "Respuesta", JOptionPane.PLAIN_MESSAGE);
+```
+
