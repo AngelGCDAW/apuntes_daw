@@ -17,7 +17,7 @@ Todos los componentes heredan de javax.swing.JComponent.
 
 #### Jerarquía de Java Swing:
 
-![Jerarquía de Java Swing.](/java/img/jerarquia_swing.png)
+![Jerarquía de Java Swing.](/docs/java/img/jerarquia_swing.png)
 
 ### Cuadros de diálogo
 
