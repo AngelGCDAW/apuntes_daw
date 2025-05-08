@@ -73,32 +73,28 @@ Este método permite mostrar ventanas de diálogo que muestran un mensaje y cont
 >
 > ```
 > // Mensaje de error
-> JOptionPane.showMessageDialog(null, "Mensaje de error", 
-> "Error", JOptionPane.EROR_MESSAGE);
+> JOptionPane.showMessageDialog(null, "Mensaje de error", "Error", JOptionPane.EROR_MESSAGE);
 > ```
 >
 > 💬 Un cuadro de texto informativo.
 >
 > ```
 > // Mensaje informativo
-> JOptionPane.showMessageDialog(null, "Mensaje informativo",
-> "Información", JOptionPane.INFORMATION_MESSAGE);
+> JOptionPane.showMessageDialog(null, "Mensaje informativo", "Información", JOptionPane.INFORMATION_MESSAGE);
 > ```
 >
 > ❗ Un cuadro de texto de aviso.
 >
 > ```
 > // Mensaje de aviso
-> JOptionPane.showMessageDialog(null, "Mensaje de aviso", 
-> "Aviso", JOptionPane.WARNING_MESSAGE);
+> JOptionPane.showMessageDialog(null, "Mensaje de aviso", "Aviso", JOptionPane.WARNING_MESSAGE);
 > ```
 >
 > ❔ Un cuadro de texto de pregunta.
 >
 > ```
 > // Mensaje de pregunta
-> JOptionPane.showMessageDialog(null, "Mensaje de pregunta", 
-> "Pregunta", JOptionPane.QUESTION_MESSAGE);
+> JOptionPane.showMessageDialog(null, "Mensaje de pregunta", "Pregunta", JOptionPane.QUESTION_MESSAGE);
 > ```
 > ---
 
@@ -115,17 +111,14 @@ Este método permite mostrar diálogos donde se puede __elegir entre varias opci
 >
 > ```
 > // Mensaje de confirmación por defecto
-> JOptionPane.showMessageDialog(null, "Aquí va el mensaje", 
-> "Ventana por defecto", JOptionPane.DEFAULT_OPTION, 
-> JOptionPane.INFORMATION_MESSAGE);
+> JOptionPane.showMessageDialog(null, "Aquí va el mensaje", "Ventana por defecto", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
 > ``` 
 > 
 > ❔ Cuadro de confirmación Si/No.
 >
 > ```
 > // Mensaje confirmación si-no
-> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va > el mensaje", "Ventana SI-NO", JOptionPane.YES_NO_OPTION, 
-> JOptionPane.QUESTION_MESSAGE);
+> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va el mensaje", "Ventana SI-NO", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 > String mensaje = "";
 >
 > if(respuesta == 0) {
@@ -134,16 +127,14 @@ Este método permite mostrar diálogos donde se puede __elegir entre varias opci
 >     mensaje = "Ha respondido no.";
 > }
 >
-> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", 
-> JOptionPane.PLAIN_MESSAGE);
+> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", JOptionPane.PLAIN_MESSAGE);
 > ```
 >
 >❓ Cuadro confirmación Si/No/Cancelar.
 > 
 > ```
 > // Mensaje de confirmacion si-no-cancelar
-> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va > el mensaje", "Ventana SI-NO-Cancelar", JOptionPane.
-> YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va > el mensaje", "Ventana SI-NO-Cancelar", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 > String mensaje = "";
 >
 > switch (respuesta) {
@@ -152,16 +143,14 @@ Este método permite mostrar diálogos donde se puede __elegir entre varias opci
 >     default -> { mensaje = "Ha cancelado"; }
 > }
 >
-> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", 
-> JOptionPane.PLAIN_MESSAGE);
+> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", JOptionPane.PLAIN_MESSAGE);
 > ```
 >
 > 🆗 Cuadro de confirmación Aceptar/Cancelar.
 >
 > ```
 > // Mensaje de aceptar-cancelar
-> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va > el mensaje", "Ventana Aceptar-Cancelar", JOptionPane.
-> OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+> int respuesta = JOptionPane.showConfirmDialog(null, "Aqui va > el mensaje", "Ventana Aceptar-Cancelar", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 > String mensaje = "";
 >
 > if (respuesta == 0) {
@@ -170,8 +159,7 @@ Este método permite mostrar diálogos donde se puede __elegir entre varias opci
 >     mensaje = "Ha respondido cancelar";
 > }
 > 
-> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", 
-> JOptionPane.PLAIN_MESSAGE);
+> JOptionPane.showMessageDialog(null, mensaje, "Respuesta", JOptionPane.PLAIN_MESSAGE);
 > ```
 >---
 
@@ -188,13 +176,9 @@ Este método permite mostrar diálogos con los __botones, iconos, texto, mensaje
 >
 > ```
 > // Para escoger entre botones
-> Object[] options = {"Si, fundamental", "No, para nada", 
-> "Cancelar"};
-> int respuesta = JOptionPane.showOptionDialog(null, "¿Es
->            importante unir programacion y creatividad?",
->            "Pregunta", JOptionPane.YES_NO_CANCEL_OPTION,
->              JOptionPane.QUESTION_MESSAGE,null, options, 
->                                             options[0]);
+> Object[] options = {"Si, fundamental", "No, para nada", "Cancelar"};
+> int respuesta = JOptionPane.showOptionDialog(null, "¿Es importante unir programacion y creatividad?",
+> "Pregunta", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,null, options, options[0]);
 >
 > // Para mostrar información
 > String mensaje = switch(respuesta) {
@@ -206,6 +190,7 @@ Este método permite mostrar diálogos con los __botones, iconos, texto, mensaje
 > JOptionPane.showMessageDialog(null, mensaje, "Respuesta", JOptionPane.WARNING_MESSAGE);
 > ```
 >---
+
 #### JOptionPane.InputDialog
 
 Este método permite mostrar diálogos donde se puede __ingresar datos o seleccionar opciones de un combo__. _Retorna un String, un objeto_.
@@ -227,9 +212,8 @@ Este método permite mostrar diálogos donde se puede __ingresar datos o selecci
 > 
 > ```
 > // Para elegir entre diferentes opciones
-> Object color = JOptionPane.showInputDialog(null, "Seleccione Un Color",
-> "COLORES", JOptionPane.QUESTION_MESSAGE, null,
->   new Object[]{"Seleccione", "Amarillo", "Azul", "Rojo"}, "Seleccione");
+> Object color = JOptionPane.showInputDialog(null, "Seleccione Un Color", "COLORES", JOptionPane.QUESTION_MESSAGE, null,
+>    new Object[]{"Seleccione", "Amarillo", "Azul", "Rojo"}, "Seleccione");
 > JOptionPane.showMessageDialog(null, color.toString());
 >```
 >---
