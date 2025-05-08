@@ -332,3 +332,11 @@ Combinación de __entrada de Texto__ con __Lista de selección desplegable__. Po
   * void setEditable(boolean b).
 
 ---
+
+### Consejos de Swing
+
+#### ¿Qué diferencia hay en utilizar Jframe y desktopPane?
+
+__JFrame__ y __JDesktopPane__ son dos componentes diferentes en Swing y se utilizan para diferentes propósitos.
+
+JFrame: Es una ventana de nivel superior que puede contener otros componentes de Swing como JPanel, JButton, JLabel, etc. Cada JFrame es una ventana completamente independiente con su propia barra de título y botones de control de ventana (minimizar, maximizar, cerrar). Normalmente, en una aplicación, se utiliza un JFrame como la ventana principal.
