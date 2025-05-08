@@ -346,3 +346,5 @@ Combinación de __entrada de Texto__ con __Lista de selección desplegable__. Po
   * void remove(String item).
   * void removeAll().
   * void setEditable(boolean b).
+
+---
